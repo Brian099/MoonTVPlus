@@ -1,4 +1,4 @@
-name: Build & Push Docker lite image
+name: Build & Push Docker lite image to github
 
 on:
   workflow_dispatch:
@@ -8,8 +8,8 @@ on:
         required: false
         default: 'latest'
         type: string
-  push:
-    branches: [ main ]
+  # push:
+    # branches: [ main ]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
